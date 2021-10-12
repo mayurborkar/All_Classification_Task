@@ -1,0 +1,20 @@
+12-10-2021 15:18:54,INFO,Loading Pickle File 
+12-10-2021 15:19:10,INFO,Pickle File Load For Prediction
+12-10-2021 15:19:11,INFO,Loading Pickle File 
+12-10-2021 15:19:12,INFO,Pickle File Load For Prediction
+12-10-2021 15:19:19,INFO,The Home Page Is Displayed
+12-10-2021 15:19:59,INFO,Request Method : POST
+12-10-2021 15:19:59,INFO,All The Feature Is Selected By Value
+12-10-2021 15:19:59,INFO,Applying Standard Scaler Pickle File For The Prediction
+12-10-2021 15:19:59,INFO,Predicting The Final Outputs
+12-10-2021 15:20:36,INFO,Loading Pickle File 
+12-10-2021 15:20:37,INFO,Pickle File Load For Prediction
+12-10-2021 15:20:43,INFO,Loading Pickle File 
+12-10-2021 15:20:44,INFO,Pickle File Load For Prediction
+12-10-2021 15:20:44,INFO,Loading Pickle File 
+12-10-2021 15:20:45,INFO,Pickle File Load For Prediction
+12-10-2021 15:20:49,INFO,The Home Page Is Displayed
+12-10-2021 15:21:24,INFO,Request Method : POST
+12-10-2021 15:21:24,INFO,All The Feature Is Selected By Value
+12-10-2021 15:21:24,INFO,Applying Standard Scaler Pickle File For The Prediction
+12-10-2021 15:21:24,INFO,Predicting The Final Outputs

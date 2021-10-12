@@ -1,0 +1,8 @@
+11-10-2021 14:22:52,INFO,Trying To Connect With MongoDB
+11-10-2021 14:22:53,INFO,Conection Is Getting Created
+11-10-2021 14:22:53,INFO,Trying To Create The Datbase Inside MongoDB
+11-10-2021 14:22:53,INFO,Database Created Inside The MongoDB
+11-10-2021 14:22:53,INFO,Trying To Create The Table Inside Datbase
+11-10-2021 14:22:53,INFO,Table Is Created Inside The Database
+11-10-2021 14:22:53,INFO,Trying To Insert Record In The Table Which Is created Inside The Datbase
+11-10-2021 14:22:57,INFO,All The Record Insert Into The Table

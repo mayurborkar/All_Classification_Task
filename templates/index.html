@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='script/script.js') }}" rel="stylesheet">
+
+    <title>Activity Recognition</title>
+</head>
+
+<body>
+    <!-- Nav As a heading -->
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Activity Recognition With Healthy Older People Using a Battery Less Wearable Sensor</span>
+    </nav>
+    <br> <br>
+    <h6 class="mx-3">Please Fill The Following Details In Order To Know The Activity</h6>
+    <div class="container">
+        <form action="\predict" method="post" class="my-3">
+            <div class="form-row">
+              <div class="col">
+                <div class="card my-3 mx-3" id="card" style="width: 21rem;">
+                  <div class ="card-body">
+                    <h5 class="card-title">Time</h5>
+                    <input type="text" name="Time" class="form-control" placeholder="Enter Float Value"
+                    required ="required">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card my-3 mx-3" id="card1" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Acceleration Frontal</h5>
+                    <input type="text" name="Acceleration_frontal" class="form-control" placeholder="Enter Float Value"
+                    required="required">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card my-3 mx-3" id="card2" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Acceleration Vertical</h5>
+                    <input type="text" name="Acceleration_vertical" class="form-control" placeholder="Enter Float Value"
+                    required="required">
+                  </div>
+                </div>
+              </div>  
+              <div class="col">
+                <div class="card mx-3" id="card3" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Acceleration Lateral</h5>
+                    <input type="text" name="Acceleration_lateral" class="form-control" placeholder="Enter Float value"
+                    required="required">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="form-row">
+              <div class="col">
+                <div class="card my-3 mx-3" id="card4" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">RSSI</h5>
+                    <input type="text" name="RSSI" class="form-control" placeholder="Enter Float value"
+                    required="required">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card my-3 mx-3" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Antenna</h5>
+                    <select name="Antenna" id = "Antenna">
+                      <option value="None">Antenna</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card my-3 mx-3" id="card5" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Phase</h5>
+                    <input type="text" name="Phase" class="form-control" placeholder="Enter Float value"
+                    required="required">
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card my-3 mx-3" style="width: 21rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Frequency</h5>
+                    <input type="text" name="Frequency" class="form-control" placeholder="Enter Float value"
+                    required="required">
+                  </div>
+                 </div>
+               </div>
+            </div>
+            <br>
+
+            <!-- Submit -->
+            <div class="col my-3">
+              <input type="submit" id="button" value="Submit" class="btn btn-primary">
+            </div>
+        </form>
+        <br>
+
+        <div class="container">
+          <h3>{{ prediction_text }}</h3>
+        </div>
+        <br>
+       <!-- <p class="copyright text-muted" style="text-align: center;">copyright@: Mayur Borkar</p>-->
+    </div>
+
+    <footer>
+      <a href="https://www.linkedin.com/in/mayurborkar/" target="_blank"><i class="fa fa-linkedin" ></i></a>
+      <!--<a href="https://github.com/mayurborkar/Internship-Energy-Efficiency" target="_blank"><i class="fa fa-github"></i></a>-->
+      <br>
+      <small class="copyright text-muted">copyright@: Mayur Borkar</small>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
